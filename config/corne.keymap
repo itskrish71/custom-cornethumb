@@ -19,36 +19,19 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <2 3>; // W and E 
+            key-positions = <15 16>; // D and F 
         };
 
-        combo_bspc {
-            bindings = <&kp BSPC>;
-            key-positions = <8 9>; // I and O
-        };
 
         resetl {
             bindings = <&sys_reset>;
             key-positions = <13 14 15 16>; // A, S, D, F
             timeout-ms = <200>;
-
-        bootl {
-            bindings = <&bootloader>;
-            key-positions = <1 2 3 4>; // Z, X, C, V
-            timeout-ms = <200>;
-        };
-
         };
 
         resetr {
             bindings = <&sys_reset>;
             key-positions = <19 20 21 22>; // J, K, L, ;
-            timeout-ms = <200>;
-        };
-
-        bootr {
-            bindings = <&bootloader>;
-            key-positions = <7 8 9 10>; // Z, X, C, V
             timeout-ms = <200>;
         };
     };
@@ -62,8 +45,8 @@
 
             bindings = <
 &none  &kp Q             &kp W              &kp E      &kp R         &kp T          &kp Y      &kp U      &kp I      &kp O               &kp P               &none
-&none  &mt LEFT_SHIFT A  &mt LEFT_CONTROL S &kp D      &kp F         &kp G          &kp H      &kp J      &kp K      &mt RIGHT_CONTROL L &mt RIGHT_SHIFT SEMI &none
-&none  &kp Z             &kp X              &kp C      &kp V         &kp B          &kp N      &kp M      &kp COMMA  &kp DOT             &kp FSLH            &none
+&none  &kp A             &kp S              &kp D      &kp F         &kp G          &kp H      &kp J      &kp K      &kp L               &kp BSPC  &none
+&none  &mt LEFT_SHIFT Z  &kp X              &kp C      &kp V         &kp B          &kp N      &kp M      &kp SQT    &kp DQT             &mt RIGHT_SHIFT ESC            &none
                                             &mo 2  &mo 1  &mt LEFT_GUI ENTER &kp SPACE  &kp LEFT_ALT     &kp LEFT_CONTROL
             >;
         };
@@ -71,20 +54,20 @@
         lower_layer {
             display-name = "lower";
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &trans &trans &trans   &trans &trans &trans
+&none  &kp N1          &kp N2        &kp N3        &kp N4       &kp N5          &kp N6      &kp N7      &kp N8    &kp N9     &kp N0           &none  
+&none  &none           &kp C_BRI_DN  &kp C_BRI_UP  &none        &none           &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT  &none            &none
+&none  &kp LEFT_SHIFT  &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP &none           &none       &kp C_PREV  &kp C_PP  &kp C_NEXT &kp RIGHT_SHIFT  &none
+                                           &trans  &trans &trans             &trans     &trans           &trans
             >;
         };
 
         raise_layer {
             display-name = "raise";
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &trans &trans &trans   &trans &trans &trans
+&none  &kp EXCL      &kp AT      &kp HASH      &kp DLLR    &kp PRCNT             &kp CARET    &kp AMPS    &kp ASTRK     &kp LPAR      &kp RPAR &none
+&none  &kp LBKT      &kp RBKT    &kp SEMI      &kp MINUS   &kp PLUS              &kp UNDER    &kp EQUAL   &kp COLON     &kp LBRC      &kp RBRC &none
+&none  &kp BSLH      &kp FSLH    &kp LT        &kp GT      &kp GRAVE             &kp TILDE    &kp PIPE    &kp COMMA     &kp DOT       &kp QMARK &none
+                                           &trans  &trans &trans             &trans     &trans            &trans
             >;
         };
         
